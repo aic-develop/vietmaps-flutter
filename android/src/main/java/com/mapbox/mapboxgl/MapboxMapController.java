@@ -302,9 +302,13 @@ final class MapboxMapController
 
   @Override
   public void setStyleString(String styleString) {
+    Log.e(TAG, "Set Style String" + styleString);
+    if(styleString.startsWith("vietmap://")) {
+      mapboxMap.setStyle(new Style.Builder().fromUri(styleString), onStyleLoadedCallback);
+      return;
+    }
     //check if json, url or plain string:
-    if (styleString == null || styleString.isEmpty()) {
-      Log.e(TAG, "setStyleString - string empty or null");
+    if (styleString.isEmpty()) {
     } else if (styleString.startsWith("{") || styleString.startsWith("[")) {
       mapboxMap.setStyle(new Style.Builder().fromJson(styleString), onStyleLoadedCallback);
     } else if (

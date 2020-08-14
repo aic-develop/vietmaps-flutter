@@ -27,7 +27,7 @@ class MapboxMapBuilder implements MapboxMapOptionsSink {
   private boolean myLocationEnabled = false;
   private int myLocationTrackingMode = 0;
   private int myLocationRenderMode = 0;
-  private String styleString = Style.MAPBOX_STREETS;
+  private String styleString = Style.VIETMAPS_BASIC;
 
   MapboxMapController build(
     int id, Context context, AtomicInteger state, PluginRegistry.Registrar registrar, String accessToken) {

@@ -30,7 +30,7 @@ class PlaceCircleBody extends StatefulWidget {
 class PlaceCircleBodyState extends State<PlaceCircleBody> {
   PlaceCircleBodyState();
 
-  static final LatLng center = const LatLng(-33.86711, 151.1947171);
+  static final LatLng center = const LatLng(21.027763, 105.834160);
 
   MapboxMapController controller;
   int _circleCount = 0;
@@ -220,8 +220,9 @@ class PlaceCircleBodyState extends State<PlaceCircleBody> {
             child: MapboxMap(
               accessToken: MapsDemo.ACCESS_TOKEN,
               onMapCreated: _onMapCreated,
+              styleString: MapboxStyles.VIETMAPS_BASIC,
               initialCameraPosition: const CameraPosition(
-                target: LatLng(-33.852, 151.211),
+                target: LatLng(21.027763, 105.834160),
                 zoom: 11.0,
               ),
             ),

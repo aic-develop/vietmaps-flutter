@@ -181,6 +181,8 @@ class _MapboxMapState extends State<MapboxMap> {
       'options': _MapboxMapOptions.fromWidget(widget).toMap(),
       'accessToken': widget.accessToken,
     };
+    print("HOHOHOHOHOHO");
+    print(creationParams);
     return _mapboxGlPlatform.buildView(
         creationParams, onPlatformViewCreated, widget.gestureRecognizers);
   }

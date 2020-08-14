@@ -31,7 +31,7 @@ class _ScrollingMapBodyState extends State<ScrollingMapBody> {
   MapboxMapController controllerOne;
   MapboxMapController controllerTwo;
 
-  final LatLng center = const LatLng(32.080664, 34.9563837);
+  final LatLng center = const LatLng(21.027763, 105.834160);
 
   @override
   Widget build(BuildContext context) {

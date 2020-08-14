@@ -42,6 +42,8 @@ class MapboxStyles {
   /// countries</a>. Using this constant means your map style will always use the latest version and
   /// may change as we improve the style.
   static const String TRAFFIC_NIGHT = "mapbox://styles/mapbox/traffic-night-v2";
+
+  static const String VIETMAPS_BASIC = "vietmap://styles/basic/style.json";
 }
 
 /// The camera mode, which determines how the map camera will track the rendered location.

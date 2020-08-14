@@ -378,7 +378,7 @@ class MapboxMapController: NSObject, FlutterPlatformView, MGLMapViewDelegate, Ma
             //guard let length = arguments["length"] as? NSNumber else { return }
             guard let bytes = arguments["bytes"] as? FlutterStandardTypedData else { return }
             guard let sdf = arguments["sdf"] as? Bool else { return }
-            guard let data = bytes.data as? Data else{ return }
+            let data = bytes.data
             guard let image = UIImage(data: data) else { return }
             if (sdf) {
                 self.mapView.style?.setImage(image.withRenderingMode(.alwaysTemplate), forName: name)
@@ -646,7 +646,7 @@ class MapboxMapController: NSObject, FlutterPlatformView, MGLMapViewDelegate, Ma
         } else if (
             !styleString.hasPrefix("http://") && 
             !styleString.hasPrefix("https://") && 
-            !styleString.hasPrefix("mapbox://")) {
+            !styleString.hasPrefix("vietmap://")) {
             // We are assuming that the style will be loaded from an asset here.
             let assetPath = registrar.lookupKey(forAsset: styleString)
             mapView.styleURL = URL(string: assetPath, relativeTo: Bundle.main.resourceURL)

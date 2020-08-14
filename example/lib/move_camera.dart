@@ -43,9 +43,10 @@ class MoveCameraState extends State<MoveCamera> {
             child: MapboxMap(
               accessToken: MapsDemo.ACCESS_TOKEN,
               onMapCreated: _onMapCreated,
+              styleString: MapboxStyles.VIETMAPS_BASIC,
               onCameraIdle: ()=>print("onCameraIdle"),
               initialCameraPosition:
-                  const CameraPosition(target: LatLng(0.0, 0.0)),
+                  const CameraPosition(target: LatLng(21.027763, 105.834160)),
             ),
           ),
         ),

@@ -35,7 +35,7 @@ class FullMapState extends State<FullMap> {
           accessToken: MapsDemo.ACCESS_TOKEN,
           onMapCreated: _onMapCreated,
           initialCameraPosition:
-          const CameraPosition(target: LatLng(0.0, 0.0)),
+          const CameraPosition(target: LatLng(21.027763, 105.834160), zoom: 11),
         )
     );
   }

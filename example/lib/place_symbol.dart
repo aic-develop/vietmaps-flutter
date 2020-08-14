@@ -277,9 +277,10 @@ class PlaceSymbolBodyState extends State<PlaceSymbolBody> {
             child: MapboxMap(
               accessToken: MapsDemo.ACCESS_TOKEN,
               onMapCreated: _onMapCreated,
+              styleString: MapboxStyles.VIETMAPS_BASIC,
               onStyleLoadedCallback: _onStyleLoaded,
               initialCameraPosition: const CameraPosition(
-                target: LatLng(-33.852, 151.211),
+                target: LatLng(21.027763, 105.834160),
                 zoom: 11.0,
               ),
             ),

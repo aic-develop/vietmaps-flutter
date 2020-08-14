@@ -29,7 +29,7 @@ class LineBody extends StatefulWidget {
 class LineBodyState extends State<LineBody> {
   LineBodyState();
 
-  static final LatLng center = const LatLng(-33.86711, 151.1947171);
+  static final LatLng center = const LatLng(21.027763, 105.834160);
 
   MapboxMapController controller;
   int _lineCount = 0;
@@ -72,10 +72,10 @@ class LineBodyState extends State<LineBody> {
     controller.addLine(
       LineOptions(
         geometry: [
-          LatLng(-33.86711, 151.1947171),
-          LatLng(-33.86711, 151.1947171),
-          LatLng(-32.86711, 151.1947171),
-          LatLng(-33.86711, 152.1947171),
+          LatLng(21.027763, 105.834160),
+          LatLng(21.027763, 105.834160),
+          LatLng(21.027763, 105.834160),
+          LatLng(21.027763, 105.834160),
         ],
         lineColor: "#ff0000",
         lineWidth: 14.0,
@@ -149,7 +149,7 @@ class LineBodyState extends State<LineBody> {
               onMapCreated: _onMapCreated,
               onStyleLoadedCallback: onStyleLoadedCallback,
               initialCameraPosition: const CameraPosition(
-                target: LatLng(-33.852, 151.211),
+                target: LatLng(21.027763, 105.834160),
                 zoom: 11.0,
               ),
             ),
